@@ -1,0 +1,18 @@
+<p>Flights</p>
+<input [formControl]="control" />
+<input [formControl]="to" />
+<button (click)="refresh()">Refresh</button>
+
+<table class="table table-striped">
+  <p>Difference {{ diff$ | async }}</p>
+  <p [ngStyle]="{ 'background-color': (online$ | async) ? 'green' : 'red' }">
+    {{ online$ | async }}
+  </p>
+  <tr *ngFor="let f of flights$ | async">
+    <td>{{ f.id }}</td>
+    <td>{{ f.from }}</td>
+    <td>{{ f.to }}</td>
+    <td>{{ f.date }}</td>
+    <td>{{ f.delayed }}</td>
+  </tr>
+</table>

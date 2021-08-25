@@ -104,6 +104,9 @@
     },
     "luggage-ui-card": {
       "tags": ["domain:luggage", "type:ui"]
+    },
+    "shared-auth-lib": {
+      "tags": ["domain:shared", "type:util"]
     }
   }
 }
